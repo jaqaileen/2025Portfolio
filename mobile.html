@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAQ AILEEN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="./mobile.html">Portfolio</a></li>
+            <li><a href="./mobileabout.html">About</a></li>
+            <li><a href="https://drive.google.com/drive/u/2/folders/1RN2cNOuxsAHQ3DEQYvpxHQwTUVryH7ns"
+                    target="_blank">Resume</a></li>
+            <li><a href="./mobileabout.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="mobile-header">
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+        <h1 onclick="window.location.href='./mobile.html'">JAQ AILEEN</h1>
+    </header>
+
+    <main class="project-grid">
+        <div class="project-card" onclick="window.location.href='./mobileproject.html'">
+            <img src="./images/bg1.jpg" alt="The Shape of Water">
+            <div class="info">
+                <h2>The Shape of Water</h2>
+                <p>Essay | Publication Design</p>
+            </div>
+        </div>
+
+
+        <div class="project-card project2" onclick="window.location.href='./mobileproject2.html'">
+            <img src="./images/bg3.png" alt="The Shape of Water">
+            <div class="thumbnail"></div>
+            <div class="info">
+                <h2>The Weaving</h2>
+                <p>Card Game</p>
+            </div>
+        </div>
+
+        <div class="project-card" onclick="window.location.href='./mobileproject3.html'">
+            <img src="./images/bg4.png" alt="The Shape of Water">
+            <div class="thumbnail"></div>
+            <div class="info">
+                <h2>Bumi</h2>
+                <p>Publication Design | Brand Identity | Web Design</p>
+            </div>
+        </div>
+
+
+        <div class="project-card" onclick="window.location.href='mobileproject4.html'">
+            <img src="./images/bg5.png" alt="The Shape of Water">
+            <div class="thumbnail"></div>
+            <div class="info">
+                <h2>Aqura</h2>
+                <p>Art Direction | Brand Identity</p>
+            </div>
+        </div>
+
+        <div class="project-card" onclick="window.location.href='./mobileproject5.html'">
+            <img src="./images/bg2.png" alt="The Shape of Water">
+            <div class="thumbnail"></div>
+            <div class="info">
+                <h2>A La Cart</h2>
+                <p>Publication Design | Visual Identity</p>
+            </div>
+        </div>
+
+        <div class="project-card" onclick="window.location.href='mobileproject6.html'">
+            <img src="./images/bg6.png" alt="In Praise">
+            <div class="thumbnail"></div>
+            <div class="info">
+                <h2>In Praise of Shadows</h2>
+                <p>Creative Coding | Web Design</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="social-vertical">
+        <a href="https://www.instagram.com/jaqaileen/"><img src="icons/mdi_instagram.svg"></a>
+        <a href="mailto:jaqaileen@gmail.com"><img src="icons/majesticons_mail-line.svg"></a>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html">Portfolio</a>
+        <a href="#">Resume</a>
+        <a href="#">LinkedIn</a>
+    </nav>
+
+    <script src="mobile.js"></script>
+
+    <script>
+        function handleResize() {
+          // If screen is wider than 900px and user is on mobile.html → go to home.html
+          if (window.innerWidth > 900 && window.location.href.includes('mobile.html')) {
+            window.location.replace("home.html");
+          }
+        }
+      
+        // Run once on load
+        handleResize();
+      
+        // And again if the user resizes the window
+        window.addEventListener('resize', handleResize);
+      </script>
+      
+</body>
+
+</html>

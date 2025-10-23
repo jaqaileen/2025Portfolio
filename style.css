@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: replica-regular, sans-serif;
+    src: 
+       url('./fonts/replica-regular.ttf') format('truetype')
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+  gap: 20px;
+}
+
+.text-container {
+  flex: 0 0 30%; /* fixed width, no shrinking */
+  /* background-color: #fcecec; */
+  /* padding: 10px; */
+  /* box-shadow: 2px 0 10px rgba(0,0,0,0.1); */
+  overflow-y: auto;
+  /* border-radius: 5px; */
+  transition: all 0.3s ease;
+  padding-bottom: 40px;
+}
+
+.text-container h1 {
+  font-family: replica-regular, sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #9A0B0B;
+  font-size: 4.2rem;
+  cursor: pointer; /* 👈 indicates interactivity */
+  transition: opacity 0.3s ease;
+  /* color: #9A0B0B; */
+}
+
+.text-container h1:hover {
+  opacity: 0.7;
+}
+
+.home-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.home-link h1 {
+  transition: opacity 0.3s ease;
+}
+
+.home-link:hover h1 {
+  opacity: 0.7;
+}
+
+.head h2 {
+  font-family: replica-regular, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #9A0B0B;
+  text-decoration: underline;
+}
+
+.head {
+  padding-bottom: 10px;
+}
+
+.about-head {
+  padding-top: 40px;
+}
+
+.item {
+  position: relative;
+  border-bottom: 1px solid #d6d6d6;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.item :hover {
+  opacity: 0.7;
+}
+
+.item h2 {
+  font-family: replica-regular, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.item p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+}
+
+.about-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  color: inherit;
+}
+
+.about-text a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* keeps color same as text */
+}
+
+.about-text a:hover {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  opacity: 0.7;   /* ensures it doesn’t appear on hover either */
+}
+
+.item .number {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  margin-top: 0;
+}
+
+.item.active .description {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.item.expanded {
+  margin-bottom: 20px;
+}
+
+/* ensure container fills viewport */
+.image-container {
+  flex: 1 0 0;
+  height: 100vh;     /* ensure the container is viewport height */
+  overflow: hidden;
+  position: relative;
+}
+
+/* target the main rotating image (and any full-width media) */
+.image-container #mainImage,
+.image-container > img {
+  width: 100%;       /* fill width */
+  height: 100%;  
+  object-fit: cover; /* fill & crop excess */
+  display: block;
+  overflow: hidden;
+}
+
+
+.image-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-scroll.scrollable {
+  overflow-y: scroll;
+}
+
+/* full-width single images */
+.image-scroll > img {
+  width: 100%; 
+  height: auto;
+  /* border-radius: 5px; */
+  object-fit: contain;
+}
+
+.image-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px; /* ✅ adds breathing space */
+  box-sizing: border-box;
+}
+
+
+/* Each row of images/videos */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Default single media item */
+.media-item {
+  flex: 1 1 100%;
+  max-width: 100%;
+  /* border-radius: 5px; */
+  object-fit: contain;
+  height: auto;
+  display: block;
+}
+
+/* Side-by-side layout (2 columns) */
+.image-row .media-item {
+  flex: 1 1 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.media-item video,
+video.media-item {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+.image-scroll {
+  width: 100%;
+  overflow-y: auto;
+}
+/* 
+.image-row img,
+.image-row video,
+.image-scroll > img,
+.image-scroll > video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+} */
+
+button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #000;
+  color: white;
+}
+
+.icon-rect {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 48px;
+  height: auto;
+  background: #9A0B0B;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  gap: 10px;
+  z-index: 999;
+}
+
+.icon-rect a img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.2s ease;
+}
+
+.icon-rect a:hover img {
+  transform: scale(1.1);
+}

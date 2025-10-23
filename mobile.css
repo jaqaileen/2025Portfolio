@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+}
+
+
+/* Hamburger menu panel */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #9A0B0B;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 55px;
+  /* just below header */
+  right: 0;
+  width: 100%;
+  background: #ffff;
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-120%);
+  transition: transform 0.5s ease;
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu li a {
+  text-decoration: none;
+  font-family: replica-regular, sans-serif;
+  color: #9A0B0B;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.mobile-menu li a:hover {
+  opacity: 0.7;
+}
+
+
+h1 {
+  font-family: replica-regular, sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #9A0B0B;
+}
+
+main {
+  margin-top: 50px;
+}
+
+/* Home Page Grid */
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  /* stack vertically */
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  /* places text at the bottom of image */
+  justify-content: flex-start;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #000;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.thumbnail {
+  position: absolute;
+  inset: 0;
+  /* fills the entire card */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+  /* padding: 15px; */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.info h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* margin-bottom: 5px; */
+}
+
+.info p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+
+/* Individual images */
+/* .project1 {
+    background-image: url('./images/bg1.jpg');
+  }
+  
+  .project2 {
+    background-image: url('./images/DSC09966-1 copy.png');
+  }
+
+  .project3 {
+    background-image: url('./images/bg2.png');
+  }
+
+  .project4 {
+    background-image: url('./images/bg4.png');
+  }
+
+  .project5 {
+    background-image: url('./images/bg5.png');
+  }
+
+  .project6 {
+    background-image: url('./images/bg6.png');
+  } */
+
+.project-card .info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 2;
+  /* above the image */
+  color: #000;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.project-card .info h2 {
+  font-family: 'replica-regular', sans-serif;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.project-card .info p {
+  margin: 2px 0 0 0;
+  font-size: 0.7rem;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* crop to fit nicely */
+  display: block;
+}
+
+
+/* Project Page */
+.project-page {
+  padding: 20px;
+  font-size: 0.8rem;
+}
+
+.project-info h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: 'replica-regular', sans-serif;
+}
+
+.project-info p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.project-media .image,
+.project-media .video {
+  margin-top: 20px;
+  background-size: cover;
+  /* fills the container */
+  background-position: center;
+  /* centers the image */
+  background-repeat: no-repeat;
+  /* no tiling */
+  width: 100%;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.project-media .video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* makes it fill like background-image */
+  display: block;
+}
+
+.project-footer {
+  display: flex;
+  font-family: replica-regular, sans-serif;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 10px 0px;
+  padding-bottom: 30px;
+  border-top: 1px solid #eee;
+}
+
+.project-footer a,
+.bottom-nav a {
+  text-decoration: none;
+  /* removes underline */
+  color: #9A0B0B;
+  /* inherits text color from parent */
+}
+
+.project-footer a:visited,
+.bottom-nav a:visited {
+  color: #9A0B0B;
+  /* prevents purple visited links */
+}
+
+.project-footer a:hover,
+.bottom-nav a:hover {
+  color: #9A0B0B;
+  /* keeps consistent color on hover */
+  text-decoration: none;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  padding: 10px 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  z-index: 1000;
+}
+
+
+/* Social vertical icons */
+.social-vertical {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.social-vertical img {
+  width: 30px;
+  height: 30px;
+}
+
+/* About Page */
+.about-page {
+  padding: 20px 20px;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #9A0B0B;
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-family: replica-regular, sans-serif;
+}
+
+.about-page code {
+  background: #f3f3f3;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* 👇 individual backgrounds per project */
+.project1 .thumbnail {
+  background-image: url('./images/shapeofwater.jpg');
+}
+
+.project2 .thumbnail {
+  background-image: url('./images/weaving.jpg');
+}
