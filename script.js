@@ -242,8 +242,8 @@ const groupedImages = {
   ],
   3: [
     ['./images/bg2.png'],
-    ['./images/A-La-Cart-Spread1.jpg', './images/A-La-Cart-Spreads3.jpg'],
-    ['./images/A-La-Cart-Spreads4jpg.jpg']
+    ['./images/alacart_walkthrough.gif'],
+    ['./images/A-La-Cart-Spread1.jpg', './images/A-La-Cart-Spreads3.jpg']
   ],
   4: [
     ['./images/bg4.png'],
