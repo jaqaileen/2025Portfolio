@@ -2,11 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  font-family: replica-regular, sans-serif;
-    src: 
-       url('./fonts/replica-regular.ttf') format('truetype')
 }
+
+@font-face {
+  font-family: 'replica-regular';
+  src: url('./fonts/replica-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -105,9 +109,15 @@ body {
   overflow: hidden;
 }
 
+
 .item :hover {
   opacity: 0.7;
   color: #a83563;
+}
+
+.item .description :hover {
+  color: black;
+  opacity: 1;
 }
 
 .item h2 {

@@ -2,9 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: replica-regular, sans-serif;
-  src: 
-     url('./fonts/replica-regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'replica-regular';
+  src: url('./fonts/replica-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
