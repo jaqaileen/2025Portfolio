@@ -24,7 +24,7 @@
   function handleResize() {
     // If screen is wider than 900px and user is on mobile.html → go to home.html
     if (window.innerWidth > 900 && window.location.href.includes('mobile.html')) {
-      window.location.replace("home.html");
+      window.location.replace("index.html");
     }
   }
 
