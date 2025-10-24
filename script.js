@@ -80,7 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ["./images/581A9968.jpg", "./images/sasha.mp4"],
       ["./images/jaq.mp4", "./images/581A0054.jpg"],
       ["./images/699A9945.jpg"],
-      ["./images/Aquralogowordmark.png"]
+      ["./images/Aquralogowordmark.png", "./images/bg5.png"]
+
     ],
     7: [
       ["./images/inpraise.mov"],
