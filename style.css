@@ -28,9 +28,7 @@ body {
   height: 35px;
   background: url('./images/cursor.png') no-repeat center / contain;
   pointer-events: none;
-  /* make sure it doesn't block clicks */
   opacity: 0.6;
-  /* 60% opacity */
   transform: translate(-50%, -50%);
   transition: transform 0.05s linear;
   z-index: 9999;
@@ -54,17 +52,19 @@ body {
 } */
 
 .website-link {
-  text-decoration: none;
-  font-size: 1rem;
-  overflow: hidden;
   font-family: replica-regular, sans-serif;
-  max-height: 0;
-  opacity: 1;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.4s ease;
   color: #9A0B0B;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0;
+  transition: all 0.3s ease;
 }
+
+.website-link:hover {
+  opacity: 0.6;
+  color: #a83563;
+}
+
 
 .item.active .website-link {
   max-height: 50px;
