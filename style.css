@@ -16,7 +16,8 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: #fff;
   color: #000;
-  cursor: none; /* hide the default cursor completely */
+  cursor: none;
+  /* hide the default cursor completely */
 }
 
 .custom-cursor {
@@ -26,8 +27,10 @@ body {
   width: 35px;
   height: 35px;
   background: url('./images/cursor.png') no-repeat center / contain;
-  pointer-events: none; /* make sure it doesn't block clicks */
-  opacity: 0.6; /* 60% opacity */
+  pointer-events: none;
+  /* make sure it doesn't block clicks */
+  opacity: 0.6;
+  /* 60% opacity */
   transform: translate(-50%, -50%);
   transition: transform 0.05s linear;
   z-index: 9999;
@@ -41,8 +44,40 @@ body {
   gap: 20px;
 }
 
+/* .website-link a{
+  text-decoration: none;
+  font-family: replica-regular, sans-serif;
+  color: #9A0B0B;
+  font-size: 0.9rem;
+  padding: none;
+  overflow: hidden;
+} */
+
+.website-link {
+  text-decoration: none;
+  font-size: 1rem;
+  overflow: hidden;
+  font-family: replica-regular, sans-serif;
+  max-height: 0;
+  opacity: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  color: #9A0B0B;
+}
+
+.item.active .website-link {
+  max-height: 50px;
+  margin-top: 8px;
+  /* opacity: 0.6; */
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .text-container {
-  flex: 0 0 25%; /* fixed width, no shrinking */
+  flex: 0 0 27%;
+  /* fixed width, no shrinking */
   /* background-color: #fcecec; */
   /* padding: 10px; */
   /* box-shadow: 2px 0 10px rgba(0,0,0,0.1); */
@@ -109,7 +144,6 @@ body {
   overflow: hidden;
 }
 
-
 .item :hover {
   opacity: 0.7;
   color: #a83563;
@@ -139,14 +173,17 @@ body {
 
 .about-text a {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  text-decoration: none;   /* removes underline */
-  color: inherit;          /* keeps color same as text */
+  text-decoration: none;
+  /* removes underline */
+  color: inherit;
+  /* keeps color same as text */
 }
 
 .about-text a:hover {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #a83563;
-  opacity: 0.7;   /* ensures it doesn’t appear on hover either */
+  opacity: 0.7;
+  /* ensures it doesn’t appear on hover either */
 }
 
 .item .number {
@@ -160,9 +197,9 @@ body {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.4s ease;
   margin-top: 0;
   color: black;
+  font-size: 0.7rem;
 }
 
 .item.active .description {
@@ -178,17 +215,20 @@ body {
 /* ensure container fills viewport */
 .image-container {
   flex: 1 0 0;
-  height: 100vh;     /* ensure the container is viewport height */
+  height: 100vh;
+  /* ensure the container is viewport height */
   overflow: hidden;
   position: relative;
 }
 
 /* target the main rotating image (and any full-width media) */
 .image-container #mainImage,
-.image-container > img {
-  width: 100%;       /* fill width */
-  height: 100%;  
-  object-fit: cover; /* fill & crop excess */
+.image-container>img {
+  width: 100%;
+  /* fill width */
+  height: 100%;
+  object-fit: cover;
+  /* fill & crop excess */
   display: block;
   overflow: hidden;
 }
@@ -208,8 +248,8 @@ body {
 }
 
 /* full-width single images */
-.image-scroll > img {
-  width: 100%; 
+.image-scroll>img {
+  width: 100%;
   height: auto;
   /* border-radius: 5px; */
   object-fit: contain;
@@ -222,7 +262,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 40px; /* ✅ adds breathing space */
+  padding-bottom: 40px;
+  /* ✅ adds breathing space */
   box-sizing: border-box;
 }
 
@@ -241,7 +282,7 @@ body {
 .media-item {
   flex: 1 1 100%;
   width: 100%;
-  height: 100%;   
+  height: 100%;
   object-fit: contain;
   height: auto;
   display: block;
@@ -259,8 +300,10 @@ body {
 .media-item video,
 video.media-item {
   width: 100%;
-  height: 100%;          /* force video to fill container height */
-  object-fit: cover;     /* fill the box like an image would */
+  height: 100%;
+  /* force video to fill container height */
+  object-fit: cover;
+  /* fill the box like an image would */
   display: block;
   border: none;
 }
@@ -269,6 +312,7 @@ video.media-item {
   width: 100%;
   overflow-y: auto;
 }
+
 /* 
 .image-row img,
 .image-row video,
@@ -306,7 +350,7 @@ button:hover {
   height: auto;
   background: #9A0B0B;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;

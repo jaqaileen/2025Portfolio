@@ -262,6 +262,13 @@ main {
   margin-bottom: 20px;
 }
 
+.project-media .image {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* keeps responsive proportions */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
 
 .project-media .video video {
   width: 100%;
