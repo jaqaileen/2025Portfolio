@@ -51,18 +51,18 @@ body {
   overflow: hidden;
 } */
 
-.website-link {
+.item .website-link {
   font-family: replica-regular, sans-serif;
-  color: #9A0B0B;
+  color: #9A0B0B !important;
   font-size: 0.9rem;
   text-decoration: none;
   padding: 0;
   transition: all 0.3s ease;
 }
 
-.website-link:hover {
-  opacity: 0.6;
-  color: #a83563;
+.item .website-link:hover {
+  opacity: 0.6 !important;
+  color: #a83563 !important; /* force color to override global hover */
 }
 
 
@@ -324,22 +324,28 @@ video.media-item {
   display: block;
 } */
 
-button {
+.buttons {
+  display: flex;
+  gap: 10px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  width: 70%;
+}
+
+button {
   flex: 1;
   padding: 10px;
   background: none;
-  border: 2px solid #000;
+  border: 1.5px solid #9A0B0B;
   border-radius: 8px;
   font-weight: 600;
-  /* cursor: pointer; */
+  cursor: pointer;
   transition: all 0.3s;
 }
 
 button:hover {
-  background: #000;
-  color: white;
+  opacity: 0.6;
+  background: #a83563;
+  color: #ffff;
 }
 
 .icon-rect {
