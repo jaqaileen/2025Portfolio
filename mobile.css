@@ -264,7 +264,7 @@ main {
 
 .project-media .image {
   width: 100%;
-  aspect-ratio: 3 / 4; /* keeps responsive proportions */
+  aspect-ratio: 4 / 3; /* keeps responsive proportions */
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
@@ -384,6 +384,7 @@ main {
   text-decoration: underline;
   color: inherit;
   cursor: pointer;
+  padding-bottom: 10%;
 }
 
 .contact-info a {
@@ -411,4 +412,43 @@ main {
 
 .project2 .thumbnail {
   background-image: url('./images/weaving.jpg');
+}
+
+.aboutbuttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  width: 70%;
+}
+
+aboutbutton {
+  display: flex;                 /* centers content */
+  justify-content: center;       /* horizontal center */
+  align-items: center;           /* vertical center */
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: 1.5px solid #9A0B0B;
+  color: #9A0B0B;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'replica-regular', sans-serif;
+}
+
+
+aboutbutton:hover {
+  opacity: 0.6;
+  background: #a83563;
+  color: #ffff;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  display: block;   /* removes any small gaps below the image */
+  margin: 15px 0;   /* adds spacing between the h1 and p */
 }
